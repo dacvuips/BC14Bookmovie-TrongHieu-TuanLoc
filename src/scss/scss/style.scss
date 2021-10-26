@@ -1,0 +1,17 @@
+@import "./base/reset";
+@import "./helpers/mixin";
+@import "./helpers/variables";
+@import "./layouts/home/home";
+@import "./component/scroll";
+@import "./base/grid";
+@import "./layouts/login/login";
+@import "./layouts/admin/admin";
+
+// Layout Tuan Lộc
+@import "./layouts/LayoutsLoc/header";
+@import "./layouts/LayoutsLoc/film";
+@import "./layouts/LayoutsLoc/intro";
+@import "./layouts/LayoutsLoc/recommend";
+@import "./layouts/LayoutsLoc/comment";
+@import "./layouts/LayoutsLoc/footer";
+@import "./layouts/LayoutsLoc/booking";

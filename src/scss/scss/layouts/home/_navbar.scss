@@ -1,0 +1,80 @@
+#nav {
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent !important;
+  position: fixed;
+  z-index: 1000;
+}
+/* NAVBAR
+----------------------*/
+
+.nav-menu {
+  padding: 6px 48px !important;
+  height: 90px;
+  transition: all 0.3s ease;
+}
+
+.nav-menu.is-scrolling,
+.nav-menu.menu-is-open {
+  background-color: rgba(0, 0, 0, 0.671);
+
+  -webkit-box-shadow: 0px 5px 23px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 5px 23px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 5px 23px 0px rgba(0, 0, 0, 0.1);
+}
+
+.nav-menu.is-scrolling {
+  padding: 0;
+}
+
+.navbar-nav .nav-link {
+  position: relative;
+}
+
+.navbar__menu {
+  .navbar__menu-item {
+    margin-bottom: 6px;
+    .navbar__menu-link {
+      color: $textWhite;
+      .navbar__icon {
+        margin-right: 6px;
+      }
+    }
+    .navbar__submenu {
+      margin-left: 15px;
+      .navbar__submenu-item {
+        margin-bottom: 6px;
+        .navbar__submenu-link {
+          font-size: 20px;
+        }
+      }
+    }
+    .navbar__text {
+      font-size: 20px;
+    }
+  }
+  .navbar__menu-right-item {
+    .navbar__menu-login-container {
+      align-items: flex-start;
+      justify-content: space-around;
+      border: 1px dashed #fff;
+      padding: 10px 0px;
+      border-radius: 5px;
+      background-color: rgb(54, 53, 53);
+      .navbar__icon-account {
+        font-size: 35px;
+        color: #fff;
+        margin: 0px 0;
+        line-height: 0px;
+      }
+      .navbar__menu-login-button {
+        color: $textWhite;
+        background-color: $bgBlack;
+        border: 1px solid #fff;
+        padding: 8px 12px;
+        border-radius: 3px;
+      }
+    }
+  }
+}

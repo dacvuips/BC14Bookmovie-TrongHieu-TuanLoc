@@ -1,0 +1,153 @@
+.intro {
+  padding: 0 20px;
+  background-color: #000;
+
+  .avatar img {
+    margin-top: $mg-1;
+    height: 300px;
+    width: 100%;
+  }
+
+  .detail__title {
+    color: $color-3;
+    font-weight: $fw-2;
+    margin-top: $mg-1;
+  }
+
+  .viewer-rating {
+    font-size: $fs-2;
+
+    .view {
+      margin-right: $mg-2;
+    }
+
+    .rate {
+      margin-right: $mg-3;
+    }
+
+    .star {
+      i {
+        margin-right: $mg-4;
+        font-size: $fs-2;
+        color: $color-5;
+      }
+    }
+  }
+
+  .information {
+    font-size: $fs-2;
+    font-weight: $fw-2;
+    margin-top: $mg-2;
+
+    span {
+      margin-right: $mg-5;
+
+      &::before {
+        content: "";
+        width: 3px;
+        height: 100%;
+        background-color: $color-3;
+      }
+    }
+  }
+
+  .time {
+    margin-top: $mg-2;
+
+    .progress {
+      width: $pg-w;
+      height: $pg-h;
+      display: inline-block;
+      margin-right: 12px;
+      background-color: $color-6;
+    }
+
+    .text {
+      font-size: $fs-3;
+    }
+  }
+
+  .description {
+    .sub-title {
+      font-size: $fs-1;
+      margin-top: $mg-2;
+      font-weight: $fw-2;
+    }
+
+    p {
+      font-size: $fs-2;
+      margin-top: $mg-2;
+    }
+  }
+
+  .info-right {
+    .icon {
+      display: flex;
+      flex-direction: row;
+      margin-top: $mg-1;
+
+      .comment-icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-right: $mg-7;
+
+        i {
+          font-size: $fs-4;
+        }
+
+        p {
+          font-size: $fs-3;
+          margin-top: $mg-6;
+        }
+      }
+
+      .share {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        i {
+          font-size: $fs-4;
+        }
+
+        p {
+          font-size: $fs-3;
+          margin-top: $mg-6;
+        }
+      }
+    }
+
+    .content {
+      .actor {
+        span {
+          font-size: $fs-2;
+          color: $color-7;
+        }
+
+        a {
+          font-size: $fs-2;
+          text-decoration: none;
+          color: $color-3;
+        }
+      }
+    }
+
+    .category {
+      margin-top: $mg-8;
+
+      span {
+        font-size: $fs-2;
+        color: $color-7;
+      }
+
+      a {
+        font-size: $fs-2;
+        text-decoration: none;
+        color: $color-3;
+      }
+    }
+  }
+}

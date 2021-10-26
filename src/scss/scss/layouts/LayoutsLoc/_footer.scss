@@ -1,0 +1,85 @@
+.footer {
+  width: 95%;
+  margin: 0 auto;
+
+  .footer-link {
+    padding: $pd-2 0;
+    margin-bottom: $mg-5;
+    .logo {
+      display: flex;
+      flex-direction: column;
+
+      .logo-footer {
+        width: $img-w-3;
+        margin-top: $mg-3;
+      }
+
+      .bocongthuong {
+        width: $img-w-3;
+        margin-top: $mg-3;
+      }
+
+      .dmca {
+        width: $img-w-4;
+        margin-top: $mg-3;
+      }
+    }
+
+    .rules,
+    .help {
+      color: $color-3;
+      font-size: $fs-6;
+
+      ul {
+        list-style: none;
+
+        li {
+          padding-top: $pd-2;
+
+          a {
+            color: $color-3;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    .rules-title,
+    .help-title {
+      font-weight: $fw-2;
+    }
+  }
+
+  .footer-infomation {
+    display: flex;
+    flex-direction: row;
+    padding: $pd-3;
+    border-top: 1px solid $color-6;
+
+    .footer-info-left {
+      p {
+        margin: $mg-11;
+        font-size: $fs-7;
+      }
+
+      a {
+        text-decoration: none;
+        color: $color-3;
+      }
+    }
+
+    .footer-info-right {
+      margin-top: $mg-10;
+      font-size: $fs-6;
+      .app-store {
+        width: $img-w-5;
+        margin-left: $mg-3;
+      }
+
+      .google-play {
+        width: $img-w-6;
+        margin-left: $mg-3;
+      }
+    }
+  }
+}

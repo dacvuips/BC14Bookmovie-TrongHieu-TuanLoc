@@ -1,0 +1,41 @@
+#footer {
+  background-image: url(https://i.imgur.com/KIKJiRW.jpeg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+
+.footer__container {
+  background-color: rgba(0, 0, 0, 0.884);
+  text-align: center;
+  padding: 20px 0;
+  span {
+    color: $textWhite;
+  }
+  .footer__app {
+    display: flex;
+    .footer__img {
+      width: 130px;
+      margin: 30px 0px 15px 0px;
+    }
+  }
+  .footer__content {
+    .coppyright {
+      color: rgba(255, 255, 255, 0.671);
+      font-size: 12px;
+      margin-bottom: 15px;
+      font-style: italic;
+    }
+    .footer__content-text {
+      display: inline-block;
+      border: 1px solid $border-color;
+      background-color: rgb(26, 28, 34);
+      font-size: 14px;
+      border-radius: 3px;
+      padding: 10px 35px;
+      margin-bottom: 10px;
+      color: rgb(28, 160, 64);
+      font-weight: 500;
+    }
+  }
+}

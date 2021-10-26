@@ -1,0 +1,48 @@
+header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  top: 0;
+  height: 50px;
+
+  .fixed {
+    position: fixed;
+  }
+
+  nav {
+    border-bottom-color: $border-bottom-color;
+    z-index: 3;
+    position: relative;
+    width: 100%;
+
+    ul li a {
+      font-size: $fs-1;
+      padding-left: $pd-1;
+      color: $color-2;
+
+      & :hover {
+        color: $color-3;
+      }
+    }
+
+    .active {
+      color: $color-3;
+    }
+  }
+
+  .register {
+    ul {
+      list-style: none;
+    }
+
+    li {
+      display: inline-block;
+    }
+
+    a {
+      text-decoration: none;
+      color: $color-3;
+    }
+  }
+}
