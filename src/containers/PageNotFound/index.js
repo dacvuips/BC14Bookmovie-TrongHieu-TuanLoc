@@ -8,9 +8,14 @@ export default class PageNotFound extends Component {
         <Header />
         <NavMovie />
         <img
-          style={{ width: "100%", height: "100%", marginTop: "90px" }}
-          src="https://thanhbinhpc.com/wp-content/uploads/2019/03/sua-loi-404-tren-may-tinh.1PNG-1.png"
-          atl="https://thanhbinhpc.com/wp-content/uploads/2019/03/sua-loi-404-tren-may-tinh.1PNG-1.png"
+          style={{
+            width: "100%",
+            height: "100%",
+            marginTop: "90px",
+            position: "fixed",
+          }}
+          src="https://1.bp.blogspot.com/-cr0bAHr5IYc/VyIXSsZUycI/AAAAAAAAH9k/nTU427gW8KsjYcrONOim6PIUHlUgB36mgCLcB/s1600/loi-404-cach-khac-phuc-loi-404-cho-website.png"
+          atl="404"
         />
       </>
     );
