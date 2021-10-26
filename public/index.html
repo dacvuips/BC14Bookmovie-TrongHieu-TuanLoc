@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <!-- Font awersome  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!-- Icon -->
+    <link rel="stylesheet" type="text/css" href="./icon/flaticon.css" />
+    <!-- Font ROBOTO -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  </head>
+  <body id="scroll-black">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+
+    <script>
+      $(function () {
+        "use strict";
+
+        // 		var currentPixel = $(".pixel")
+        // 		var currentColor = $(".pixel").attr("data-color");
+
+        // 		this.currentPixel[i].css({background: this.currentColor})
+        //  FIXED  MENU - HEADER
+        // -----------------------------------
+        function menuscroll() {
+          var $navmenu = $(".nav-menu");
+          if ($(window).scrollTop() > 50) {
+            $navmenu.addClass("is-scrolling");
+          } else {
+            $navmenu.removeClass("is-scrolling");
+          }
+        }
+        menuscroll();
+        $(window).on("scroll", function () {
+          menuscroll();
+        });
+        // NAVBAR CLOSE ON CLICK
+        //-----------------------------------
+
+        $(".navbar-nav > li:not(.dropdown) > a").on("click", function () {
+          $(".navbar-collapse").collapse("hide");
+        });
+        // NAVBAR TOGGLE BG
+
+        var siteNav = $("#navbar");
+        siteNav.on("show.bs.collapse", function (e) {
+          $(this).parents(".nav-menu").addClass("menu-is-open");
+        });
+        siteNav.on("hide.bs.collapse", function (e) {
+          $(this).parents(".nav-menu").removeClass("menu-is-open");
+        });
+
+        // Select all links with hashes
+        $('a[href*="#"]')
+          .not('[href="#"]')
+          .not('[href="#0"]')
+          .not('[data-toggle="tab"]')
+          .on("click", function (event) {
+            // On-page links
+            if (
+              location.pathname.replace(/^\//, "") ==
+                this.pathname.replace(/^\//, "") &&
+              location.hostname == this.hostname
+            ) {
+              // Figure out element to scroll to
+              var target = $(this.hash);
+              target = target.length
+                ? target
+                : $("[name=" + this.hash.slice(1) + "]");
+              // Does a scroll target exist?
+              if (target.length) {
+                // Only prevent default if animation is actually gonna happen
+                event.preventDefault();
+                $("html, body").animate(
+                  {
+                    scrollTop: target.offset().top,
+                  },
+                  1000,
+                  function () {
+                    // Callback after animation
+                    // Must change focus!
+                    var $target = $(target);
+                    $target.focus();
+                    if ($target.is(":focus")) {
+                      // Checking if the target was focused
+                      return false;
+                    } else {
+                      $target.attr("tabindex", "-1"); // Adding tabindex for elements not focusable
+                      $target.focus(); // Set focus again
+                    }
+                  }
+                );
+              }
+            }
+          });
+
+        // OWL CAROUSEL
+        // -----------------------------------
+        var $testimonialsDiv = $(".testimonials");
+        if ($testimonialsDiv.length && $.fn.owlCarousel) {
+          $testimonialsDiv.owlCarousel({
+            items: 1,
+            nav: true,
+            dots: false,
+            navText: [
+              '<span class="ti-arrow-left"></span>',
+              '<span class="ti-arrow-right"></span>',
+            ],
+          });
+        }
+
+        var $galleryDiv = $(".img-gallery");
+        if ($galleryDiv.length && $.fn.owlCarousel) {
+          $galleryDiv.owlCarousel({
+            nav: false,
+            center: true,
+            loop: true,
+            autoplay: true,
+            dots: true,
+            navText: [
+              '<span class="ti-arrow-left"></span>',
+              '<span class="ti-arrow-right"></span>',
+            ],
+            responsive: {
+              0: {
+                items: 1,
+              },
+              768: {
+                items: 3,
+              },
+            },
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
