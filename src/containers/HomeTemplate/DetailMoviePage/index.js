@@ -82,9 +82,7 @@ class DetailPage extends Component {
                 <div className="description">
                   <p className="text text-light">{data?.moTa}</p>
                 </div>
-                <Link to="/booking">
-                  <button className="btn btn-warning ">Đặt vé</button>
-                </Link>
+                
               </div>
             </div>
           </div>
