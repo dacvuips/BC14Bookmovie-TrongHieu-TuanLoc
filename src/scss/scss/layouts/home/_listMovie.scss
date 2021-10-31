@@ -1,0 +1,185 @@
+#listMovie {
+  // height: 1000px;
+  .listMovie__container {
+    background-color: #111111;
+    padding: 6.4px 46.4px;
+    .listMovie__setrow {
+      margin-left: auto;
+      margin-right: auto;
+      .listMovie__item {
+        width: 230px;
+        position: relative;
+        margin: 0 auto;
+        -webkit-box-shadow: 0px 0px 4px 0px #000000;
+        box-shadow: 0px 0px 4px 0px #000000;
+        .listMovie__img {
+          img {
+            width: 100%;
+            height: 290px;
+            border-radius: 4px;
+          }
+          &:hover .movie__modal {
+            display: block;
+            animation: zoomDetail linear 0.4s;
+
+            @keyframes zoomDetail {
+              from {
+                opacity: 0;
+                transform: scale(0, 0);
+              }
+              to {
+                opacity: 1;
+                transform: scale(1, 1);
+              }
+            }
+          }
+          // &::before {
+          //   content: "";
+          //   display: block;
+          //   position: absolute;
+          //   bottom: 26%;
+          //   right: 0;
+          //   background-image: linear-gradient(rgba(17, 17, 17, 0), $bg-color);
+          //   width: 100%;
+          //   height: 30px;
+          //   border-radius: 4px;
+          // }
+        }
+      }
+    }
+  }
+}
+
+.movie__modal {
+  display: none;
+  position: absolute;
+  left: -55px;
+  top: -35px;
+  width: 350px;
+  height: auto;
+  z-index: 1;
+  background-color: $bg-quickdetail;
+  -webkit-box-shadow: 0 0 3.125rem #000;
+  box-shadow: 0 0 3.125rem #000;
+  .movie__modal-header {
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 32%;
+      right: 0;
+      background-image: linear-gradient(rgba(17, 17, 17, 0), $bg-quickdetail);
+      width: 100%;
+      height: 50px;
+    }
+  }
+  .movie__modal-content {
+    margin: 25px 0;
+
+    .movie__modal-title {
+      color: #fff;
+      margin: 10px 0 12px 18px;
+    }
+    .movie__modal-see {
+      padding: 6px 16px;
+      background-color: $textWhite;
+      border: 1px solid $textWhite;
+      color: $bgBlack;
+      border-radius: 2px;
+      display: inline-flex;
+      align-items: center;
+      margin-left: 18px;
+      text-decoration: none;
+
+      &:hover {
+        background-color: rgb(221, 221, 221);
+      }
+      i {
+        margin-right: 5px;
+        font-size: 14px;
+      }
+      span {
+        font-size: 12px;
+      }
+    }
+    .movie__modal-detail {
+      padding: 6px 16px;
+      background-color: $bg;
+      border: 1px solid $textWhite;
+      color: $textWhite;
+      border-radius: 2px;
+      display: inline-flex;
+      align-items: center;
+      margin-left: 10px;
+      text-decoration: none;
+      &:hover {
+        background-color: rgb(31, 30, 30);
+      }
+      i {
+        margin-right: 5px;
+        font-size: 14px;
+      }
+      span {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+.listMovie__content {
+  margin-top: 8px;
+  .listMovie__title {
+    margin-bottom: 8px;
+    .listMovie__title-link {
+      text-decoration: none;
+      color: $textWhite;
+      font-size: 16px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      line-height: 20px;
+      -webkit-line-clamp: 1;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+    }
+  }
+  .listMovie__date-gr {
+    margin-bottom: 10px;
+    // display: flex;
+    .listMovie__showDate {
+      color: $textWhite;
+    }
+    .listMovie__backdrop {
+      margin-right: auto;
+      background-color: #fff;
+      width: 1px;
+    }
+    .listMovie__rating {
+      color: yellow;
+      padding-bottom: 10px;
+    }
+  }
+  .listMovie__description {
+    .listMovie__desc-text {
+      color: $textDecs;
+      font-size: 12px;
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      line-height: 20px;
+      -webkit-line-clamp: 2;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+    }
+    .card__text-line {
+      color: $textDecs;
+      font-size: 15px;
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis !important;
+      line-height: 20px;
+      -webkit-line-clamp: 3;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+    }
+  }
+}

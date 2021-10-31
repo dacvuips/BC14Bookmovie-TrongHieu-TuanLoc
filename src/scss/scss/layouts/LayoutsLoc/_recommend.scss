@@ -1,0 +1,38 @@
+.recommend {
+  width: 95%;
+  margin: 0 auto;
+
+  h3 {
+    font-size: $fs-5;
+    font-weight: $fw-2;
+    margin-bottom: $mg-2;
+  }
+
+  .recommend-text {
+    margin-top: $mg-3;
+
+    a {
+      text-decoration: none;
+      color: $color-3;
+      margin-bottom: $mg-3;
+    }
+
+    span {
+      font-size: $fs-2;
+      padding-right: $pd-2;
+      margin-top: $mg-3;
+    }
+
+    p {
+      font-size: $fs-3;
+      color: $color-7;
+      margin-top: $mg-3;
+    }
+  }
+}
+.recommend__line {
+  width: 0.5px;
+  height: 15px;
+  margin: 10px 10px 0px 5px;
+  background-color: $color-2;
+}
